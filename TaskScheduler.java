@@ -18,6 +18,7 @@ class Solution {
         int interval = 0;
         int time = 0;
         while(count[25] > 0){
+            interval =0;
             while(interval <= n && count[25]>0){
             if(interval < 26 && count[25-interval] > 0){
                 count[25-interval]--;
@@ -26,7 +27,7 @@ class Solution {
             time++;
             }
             Arrays.sort(count); // O(1)  complexity
-            interval =0;
+            
         }
         return time;
     }
